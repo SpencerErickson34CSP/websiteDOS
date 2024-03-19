@@ -1,0 +1,25 @@
+
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: #ad1e1c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+canvas
+{
+    background-color: silver;
+    display: block;
+    border-radius: 5px;
+    
+}
