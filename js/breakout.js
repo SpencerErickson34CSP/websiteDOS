@@ -111,6 +111,36 @@ function movePaddle()
     }
 }
 
+function moveBall()
+    {
+        ball.x = ball.x + ball.dx
+        ball.y = ball.y + ball.dy
+
+        //top
+        if (ball.y + ball.size < 0)
+        {
+            ball.dy = -1 * ball.dy
+        }
+
+        //right
+        if (ball.x + ball.size < canvas.width)
+        {
+            ball.dx = -1 * ball.dx
+        }
+
+        //bottom
+        if (ball.y + ball.size < canvas.height)
+        {
+            ball.dy = -1 * ball.dy
+        }
+
+        //left
+        if (ball.x + ball.size < 0)
+        {
+            ball.dx = -1 * ball.dx
+        }
+    }
+
 function keyDown(e)
 {
     if (e.key == 'ArrowRight' || e.key == 'Right')
@@ -133,10 +163,11 @@ function keyUp(e)
 }
 
 document.addEventListener('keydown', keyDown)
-document.addEventListener('keyuo', keyUp)
+document.addEventListener('keyup', keyUp)
 
 function update()
 {
+    moveBall()
     movePaddle()
     draw()
     requestAnimationFrame(update)
