@@ -139,6 +139,12 @@ function moveBall()
         {
             ball.dx = -1 * ball.dx
         }
+
+        //paddle stuff bb
+        if (ball.x - ball.size > paddle.x && ball.x + ball.size < paddle.x + paddle.w && ball.y + ball.size < paddle.y)
+        {
+            ball.dy = -1 * ball.dy
+        }
     }
 
 function keyDown(e)
