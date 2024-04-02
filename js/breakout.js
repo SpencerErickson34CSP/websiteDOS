@@ -154,10 +154,16 @@ function moveBall()
                {
                     ball.dy = -1 * ball.dy
                     brick.visible = false
+                    increaseScore()
                }
             }
         })
     }
+
+function increaseScore()
+{
+    
+}
 
 function keyDown(e)
 {
