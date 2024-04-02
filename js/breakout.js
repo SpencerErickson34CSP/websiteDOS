@@ -150,7 +150,7 @@ function moveBall()
         bricks.forEach(column => {
             if (brick.visible)
             {
-               if (ball.y - ball.size < brick.y + brick.h) //bottom
+               if (ball.x -ball.size > brick.x && ball.x + ball.size < brick.x + brick.w &&  ball.y - ball.size < brick.y + brick.h)
                {
                     ball.dy = -1 * ball.dy
                     brick.visible = false
