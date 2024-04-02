@@ -162,7 +162,22 @@ function moveBall()
 
 function increaseScore()
 {
-    
+    score++
+
+    if (score == brickRowCount * brickColumnCount)
+    {
+        score = 0
+        showAllBricks()
+    }
+}
+
+function showAllBricks()
+{
+    brick.forEach( column => {
+        column.forEach(brick => {
+            brick.visible = true
+        })
+    })
 }
 
 function keyDown(e)
