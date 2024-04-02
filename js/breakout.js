@@ -145,6 +145,18 @@ function moveBall()
         {
             ball.dy = -1 * ball.dy
         }
+
+        //brick stuff
+        bricks.forEach(column => {
+            if (brick.visible)
+            {
+               if (ball.y - ball.size < brick.y + brick.h) //bottom
+               {
+                    ball.dy = -1 * ball.dy
+                    brick.visible = false
+               }
+            }
+        })
     }
 
 function keyDown(e)
