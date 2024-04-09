@@ -8,16 +8,27 @@
 </head>
     <body>
         <h1>Breakout</h1>
-        <button id="rules-btn" class="btn rules-btm">Rules are for fools who drool</button>
+        <button id="rules-btn" class="btn rules-btn"><i class="fa-solid fa-book"></i></button>
         <div id="rules" class="rules">
-            <h2>How to play, if you day....... re... d-dare</h2>
+            <h2>Rules are for fools who drool</h2>
             <p>use the left and right (< & >) keys to move the thing to hit the things with the thing</p>
             <p>its breakout bro, you know what to do, unless your a liteal baby-infant, in other words, i beleive in you bud</p>
             <button id="close-btn" class="btn">close rules</button>
+        </div>
+
+        <button id="settins-btn" class="btn settings-btn"><i class="fa-solid fa-gear"></i></button>
+        <div class="settings">
+            <audio src="/Music/come_over.mp3" controls>
+                <p>If you are reading this, it is because your browser does not support the audio element.</p>
+            </audio>
+            <button id="themeBlack" class="black">black</button>
+            <button id="themeBlue" class="blue">black</button>
+            <button id="themeRed" class="red">black</button>
         </div>
 
         <canvas id="canvas" width="800" height="600"></canvas>
 
     </body>
 <script src="js/breakout.js"></script>
+<script src ="https://kit.fontawesome.com/c513779648.js" crossorigin="anonymous"></script>
 </html>
